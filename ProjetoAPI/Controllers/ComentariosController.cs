@@ -24,7 +24,7 @@ namespace ProjetoAPI.Controllers
             if (comentario != null)
                 return ResponseMessage(Request.CreateResponse<Comentario>(HttpStatusCode.OK, comentario));
             else
-                return ResponseMessage(Request.CreateResponse<Comentario>(HttpStatusCode.NotFound, comentario));
+                return ResponseMessage(Request.CreateResponse<string>(HttpStatusCode.NotFound, "Comentário não encontrado"));
         }
 
         // POST api/comentarios
